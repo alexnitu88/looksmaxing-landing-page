@@ -58,7 +58,7 @@ Check out websites using the Mobile App Template:
 ## ⚙️ How to run
 
 ### Pre-requisites
-- NodeJS
+- NodeJS v16.20.2 (use nvm)
 - Ruby, Bundler
 
 ### Install
