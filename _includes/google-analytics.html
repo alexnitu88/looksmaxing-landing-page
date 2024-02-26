@@ -2,7 +2,7 @@
     console.log("Loaded analytics")
     // Import the functions you need from the SDKs you need
     import {initializeApp} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import {getAnalytics} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+    import {getAnalytics, logEvent} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,4 +21,62 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
+
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log("Logging page_view in firebase")
+
+        logEvent(analytics, 'page_view', {
+            page_path: window.location.pathname,
+            page_title: document.title,
+            hostname: window.location.hostname
+        });
+    })
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const playButton = document.querySelector('.app__button-play');
+        if (playButton) {
+            playButton.addEventListener('click', function () {
+                logEvent(analytics, 'clicked_google_play', {
+                    content_type: 'button_click',
+                });
+            });
+        }
+
+        const iosButton = document.querySelector('.app__button-ios');
+        if (iosButton) {
+            iosButton.addEventListener('click', function () {
+                logEvent(analytics, 'clicked_apple_store', {
+                    content_type: 'button_click',
+                });
+            });
+        }
+
+        const webButton = document.querySelector('.app__button-web');
+        if (webButton) {
+            webButton.addEventListener('click', function () {
+                logEvent(analytics, 'clicked_web_app', {
+                    content_type: 'button_click',
+                });
+            });
+        }
+
+        const downloadButton1 = document.getElementById('download_button_1');
+        if (downloadButton1) {
+            downloadButton1.addEventListener('click', function () {
+                logEvent(analytics, 'clicked_download_button_1', {
+                    content_type: 'button_click',
+                });
+            });
+        }
+
+        const downloadButton2 = document.getElementById('download_button_2');
+        if (downloadButton2) {
+            downloadButton2.addEventListener('click', function () {
+                logEvent(analytics, 'clicked_download_button_2', {
+                    content_type: 'button_click',
+                });
+            });
+        }
+    });
+
 </script>
