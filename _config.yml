@@ -31,16 +31,6 @@ social:
 languages: [ "en" ]
 ampdir: amp
 
-#github: https://github.com/sandoche/Mobile-app-landingpage-template
-
-### Google webmaster tools, Google Analytics, Doorbell and Cookie consent uncomment and put the API key
-#webmaster_verifications:
-#  google: verification_code
-#google_analytics: UA-XXXXXXXXX-X
-#doorbell:
-#  id: doorbell_id
-#  appKey: doorbell_appKey
-
 #cookie_consent: true
 
 ### Build settings
