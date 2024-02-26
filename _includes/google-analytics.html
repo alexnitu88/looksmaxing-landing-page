@@ -77,6 +77,33 @@
                 });
             });
         }
+
+        const facebookButton = document.getElementById('link_Facebook');
+        if (facebookButton) {
+            facebookButton.addEventListener('click', function () {
+                logEvent(analytics, 'clicked_facebook', {
+                    content_type: 'button_click',
+                });
+            });
+        }
+
+        const tiktokButton = document.getElementById('link_Tiktok');
+        if (tiktokButton) {
+            tiktokButton.addEventListener('click', function () {
+                logEvent(analytics, 'clicked_tiktok', {
+                    content_type: 'button_click',
+                });
+            });
+        }
+
+        const instagramButton = document.getElementById('link_Instagram');
+        if (instagramButton) {
+            instagramButton.addEventListener('click', function () {
+                logEvent(analytics, 'clicked_instagram', {
+                    content_type: 'button_click',
+                });
+            });
+        }
     });
 
 </script>
