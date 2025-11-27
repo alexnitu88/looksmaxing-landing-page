@@ -308,7 +308,7 @@ PLATFORMS
 
 DEPENDENCIES
   amp-jekyll
-  github-pages (= 231)
+  github-pages
   jekyll-feed
   jekyll-seo-tag
   jekyll-sitemap

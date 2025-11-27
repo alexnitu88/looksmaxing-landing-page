@@ -17,10 +17,15 @@ full_description_footer: '
 iOS: https://apps.apple.com/us/app/looksmax-ai-umaxx-face-rating/id6477295133?platform=iphone&ppid=cb1a6685-e2b3-45e3-a663-fc910c57664c
 #web: https://telegra.ph/Replace-this-link-07-23
 screenshots:
-  - 1.png
-  - 2.png
-  - 3.png
-  - 4.png
+  - 1.webp
+  - 2.webp
+  - 3.webp
+  - 4.webp
+  - 5.webp
+
+rating:
+  value: 4.9
+  count: 3913
 #companies:
 #  - url: https://telegra.ph/Replace-this-link-07-23
 #    image: androidpolice.png
